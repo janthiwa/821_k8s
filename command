@@ -7,3 +7,10 @@ kubectl get all | เช็ค pod ทั้งหมด
 kubectl delete all --all | ลบ pod ทั้งหมด
 kubectl delete pods [namepod] | ลบ pod
 kubectl delete deployment [namedeployment] | ลบ deployment
+
+kubectl apply -f . | สั่ง apply ทุก Node
+
+kubectl port-forward svc/client-service 30001:80 | ทำการ forward port [เลข Port] หน้าบ้าน
+kubectl port-forward svc/server-service 30002:80
+
+kubectl port-forward svc/mongo-service 27017:27017
