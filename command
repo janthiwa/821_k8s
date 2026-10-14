@@ -14,3 +14,5 @@ kubectl port-forward svc/client-service 30001:80 | ทำการ forward port 
 kubectl port-forward svc/server-service 30002:80
 
 kubectl port-forward svc/mongo-service 27017:27017
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.15.1/deploy/static/provider/cloud/deploy.yaml | ติดตั้งตาม Quick start ของ ingress-nginx

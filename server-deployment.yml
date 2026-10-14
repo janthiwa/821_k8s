@@ -1,3 +1,4 @@
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -9,23 +10,23 @@ spec:
       app: server
   template:
     metadata:
-      name: server-pods
       labels:
         app: server
     spec:
       containers:
         - name: server
           image: imsuriyapi/todo-api:v5
+          ports:
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: server-service
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: server
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30002
